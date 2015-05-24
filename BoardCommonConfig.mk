@@ -81,7 +81,7 @@ COMMON_GLOBAL_CFLAGS += -DSEC_HWJPEG_G2D -DWORKAROUND_BUG_10194508
 # HWC
 BOARD_USES_PROPRIETARY_HWC := true
 
-#GPS
+# PIE (GPS)
 TARGET_NEEDS_NON_PIE_SUPPORT := true
 
 # FIMG Acceleration
@@ -109,6 +109,7 @@ BOARD_USE_METADATABUFFERTYPE := true
 BOARD_USES_MFC_FPS := true
 BOARD_USE_S3D_SUPPORT := true
 BOARD_USE_CSC_FIMC := false
+BOARD_CANT_REALLOCATE_OMX_BUFFERS := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -163,6 +164,9 @@ BACKLIGHT_PATH := /sys/class/backlight/panel/brightness
 
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.exynos4
+
+# Show Battery Percentage in LPM mode
+BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # inherit from the proprietary version
 -include vendor/samsung/smdk4412-common/BoardConfigVendor.mk
