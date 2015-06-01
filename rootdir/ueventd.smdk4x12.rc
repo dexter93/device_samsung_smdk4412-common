@@ -103,3 +103,6 @@
 # mobicore DRM
 /dev/mobicore             0600   drmrpc     drmrpc
 /dev/mobicore-user        0660   drm        drmrpc
+
+# secure mem driver
+/dev/s5p-smem             0660   drm        drmrpc
